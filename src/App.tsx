@@ -1,24 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import './assets/styles/App.sass';
+// import Echo from 'laravel-echo';
+import Pusher from 'pusher-js';
+import AllRoutes from './routes';
+// import { authAccessHeader } from './redux/header';
+// import ChecklistTemplate from './components/templates/ChecklistTemplate';
+// import ListTemplate from './components/templates/ListTemplate';
+// import AuthTemplate from './components/templates/AuthTemplate';
 
 function App() {
+  useEffect(() => {
+    Pusher.logToConsole = true;
+    window.pusher = new Pusher('8eac3a2c951a0e66a5c6', {
+      cluster: 'eu',
+      forceTLS: true,
+    });
+    // window.Echo = new Echo({
+    //   broadcaster: 'pusher',
+    //   key: '8eac3a2c951a0e66a5c6',
+    //   cluster: 'eu',
+    //   forceTLS: true,
+    //   encrypted: true,
+    //   authEndpoint: 'http://localhost:80/broadcasting/auth',
+    //   auth: {
+    //     headers: {
+    //       Authorization: `Bearer ${authAccessHeader()}`,
+    //       Accept: 'application/json',
+    //     },
+    //   },
+    // });
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AllRoutes />
     </div>
   );
 }

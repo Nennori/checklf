@@ -1,0 +1,49 @@
+.task-item
+  width: 100%
+  min-height: fit-content
+  padding: 21px 64px 21px 35px
+  position: relative
+  border-bottom: 1px solid #E7E7E7
+  list-style-type: none
+  margin: 0px
+  box-sizing: border-box
+  overflow-wrap: break-word
+  .button-trash
+    opacity: 0
+  &:hover
+    .button-trash
+      opacity: 1
+  &__container
+    width: 100%
+    display: block
+    display: flex
+    flex-flow: row nowrap
+    margin: 0px
+  &__content
+    font-size: 14px
+    margin: 0px
+    width: 100%
+    text-align: left
+    line-height: 20px
+  &__content-text
+    border: 1px solid #E7E7E7
+    padding: 10px 14px
+    box-sizing: border-box
+    font-size: 14px
+    width: 100%
+    outline: none
+    font-family: $font-default
+    margin-bottom: 12px
+    &:focus
+      border-color: #cccccc
+  &__button-container
+    display: flex
+    flex-flow: row nowrap
+    justify-content: flex-end
+    button:first-child
+      margin-right: 15px
+  &__content-container
+    width: 100%
+  .button-trash
+    right: 10px
+    top: 9px

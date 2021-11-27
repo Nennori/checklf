@@ -1,0 +1,51 @@
+.field
+  font:
+    weight: 400
+    size: 14px
+  line-height: 23px
+  width: 100%
+  position: relative
+  margin-top: 0px
+  margin-bottom: 0px
+  &__input
+    width: 100%
+    max-width: 356px
+    height: 48px
+    border: 1px solid $text-color
+    border-radius: 5px
+    padding-left: 5%
+    padding-right: 5%
+    color: $text-color
+    box-sizing: border-box
+    @media screen and (max-width: 375px)
+      height: 48px
+    font:
+      weight: 400
+      size: 15px
+    &::placeholder
+      color: #BBBBBB
+    &:focus
+      border-color: $text-color
+      outline: none
+    &--error
+      border-color: $accent-pink
+      outline: none
+      padding-right: 16%
+      &:focus
+        border-color: $accent-pink
+        outline: none
+  &__label
+    font-weight: 600
+    font-size: 13px
+    line-height: 19px
+    display: block
+    text-align: left
+    margin-bottom: 2px
+  &__error-message
+    color: $accent-pink
+    font-weight: 500
+    font-size: 13px
+    line-height: 19px
+    text-align: left
+    margin: 2px 0px 0px 0px
+

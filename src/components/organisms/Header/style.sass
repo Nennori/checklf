@@ -1,0 +1,35 @@
+.header
+  background-color: #ffffff
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+  width: 100%
+  height: 62px
+  margin-bottom: 15px
+  &__button-logout
+    border: none
+    background-color: #ffffff
+    box-shadow: none
+    color: $accent-orange
+    margin-right: 15px
+    height: 100%
+    &:hover
+      cursor: pointer
+  &__container
+    width: 80%
+    height: 100%
+    display: flex
+    flex-wrap: nowrap
+    justify-content: space-between
+    margin: auto
+    align-items: center
+  &__button-container
+    display: flex
+    flex-wrap: wrap
+    height: 100%
+    align-items: center
+    &>h4
+      color: $accent-pink
+    button
+      margin: auto 9px
+      &:hover
+        h4
+          text-decoration: underline
